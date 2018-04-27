@@ -10,16 +10,21 @@ public class Bubble {
 		Swap swapper = new Swap();
 		boolean isSwapped = false;
 		do {
-			for(int i=1;i<len;i++) {
+			for(int i=1;i<len-1;i++) {
 				if(toSort[i-1] > toSort[i]) {
-					swapper.swapElementsInt(i-1, i, toSort);
+					swapElementsInt(i-1, i, toSort);
 					isSwapped = true;
 				}
 			}
-			len -= 1;
-		} while(isSwapped);
+		} while(!isSwapped);
 		
 		return toSort;
+	}
+	
+	public void swapElementsInt(int leftIndex, int rightIndex, int[] array) {
+		int t = array[leftIndex];
+		array[leftIndex] = array[rightIndex];
+		array[rightIndex] = t;
 	}
 
 }

@@ -6,11 +6,10 @@ public class Swap {
 	}
 	
 	
-	public int[] swapElementsInt(int leftIndex, int rightIndex, int[] array) {
+	public void swapElementsInt(int leftIndex, int rightIndex, int[] array) {
 		int t = array[leftIndex];
 		array[leftIndex] = array[rightIndex];
 		array[rightIndex] = t;
-		return array;
 	}
 	
 	
