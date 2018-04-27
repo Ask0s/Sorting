@@ -5,6 +5,10 @@ import java.util.Random;
 public class Main {
 
     private Random random = new Random();
+    
+    public Main(){
+    	
+    } // No-arg class constructor
 
     // Pre: The maximum size that you want the array returned to be
     // Post: Returns a random integer between 0 and maxSize
@@ -31,6 +35,13 @@ public class Main {
     }
 
     public static void main(String[] args) {
-
+    	Main main = new Main();
+    	int[] unsortedArray = main.createInts(20, 500);
+    	Bubble bubble = new Bubble(unsortedArray);
+    	int[] sortedArray = bubble.bubbleSort(unsortedArray);
+    	for(int i=0;i<sortedArray.length;i++) {
+    		System.out.println(sortedArray[i]);
+    	}
+    	System.out.println(sortedArray);
     }
 }
