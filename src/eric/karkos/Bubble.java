@@ -1,15 +1,8 @@
 package eric.karkos;
 
 public class Bubble {
-	
-	private int[] bubbleArray;
-	
-	public Bubble(int[] unsortedArray) {
-		// Sets elements in array to be bubble sorted
-		this.bubbleArray = new int[unsortedArray.length];
-		for(int i=0;i<bubbleArray.length;i++) {
-			bubbleArray[i] = unsortedArray[i];
-		}
+
+	public Bubble() {
 	}
 	
 	public int[] bubbleSort(int[] toSort) {
@@ -23,7 +16,7 @@ public class Bubble {
 					isSwapped = true;
 				}
 			}
-			// len -= 1;
+			len -= 1;
 		} while(isSwapped);
 		
 		return toSort;

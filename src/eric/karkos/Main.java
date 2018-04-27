@@ -36,9 +36,11 @@ public class Main {
 
     public static void main(String[] args) {
     	Main main = new Main();
+    	System.out.println("Helllo world");
     	int[] unsortedArray = main.createInts(20, 500);
-    	Bubble bubble = new Bubble(unsortedArray);
+    	Bubble bubble = new Bubble();
     	int[] sortedArray = bubble.bubbleSort(unsortedArray);
+
     	for(int i=0;i<sortedArray.length;i++) {
     		System.out.println(sortedArray[i]);
     	}
