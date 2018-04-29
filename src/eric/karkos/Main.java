@@ -36,13 +36,11 @@ public class Main {
 
     public static void main(String[] args) {
     	Main main = new Main();
-    	int[] unsortedArray = main.createInts(20, 500);
+    	int[] unsortedArray = main.createInts(100, 500);
     	Bubble bubble = new Bubble();
-    	int[] sortedArray = bubble.bubbleSort(unsortedArray);
-    	System.out.println(sortedArray.length);
-    	for(int i=0;i<sortedArray.length;i++) {
-    		System.out.println(sortedArray[i]);
-    	}
-    	System.out.println(sortedArray);
+    	bubble.bubbleSort(unsortedArray);
+    	for (int i : unsortedArray) {
+    	    System.out.println(i);
+        }
     }
 }

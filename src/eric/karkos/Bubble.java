@@ -2,29 +2,19 @@ package eric.karkos;
 
 public class Bubble {
 
+	Swap swapper = new Swap();
+
 	public Bubble() {
 	}
 	
-	public int[] bubbleSort(int[] toSort) {
+	public void bubbleSort(int[] toSort) {
 		int len = toSort.length;
-		Swap swapper = new Swap();
-		boolean isSwapped = false;
-		do {
-			for(int i=1;i<len-1;i++) {
-				if(toSort[i-1] > toSort[i]) {
-					swapElementsInt(i-1, i, toSort);
-					isSwapped = true;
+		for(int i=0;i<len;i++) {
+			for (int k=1;k<len-1;k++) {
+				if(toSort[k-1] > toSort[k]) {
+					swapper.swapElementsInt(k-1,k,toSort);
 				}
 			}
-		} while(!isSwapped);
-		
-		return toSort;
+		}
 	}
-	
-	public void swapElementsInt(int leftIndex, int rightIndex, int[] array) {
-		int t = array[leftIndex];
-		array[leftIndex] = array[rightIndex];
-		array[rightIndex] = t;
-	}
-
 }
