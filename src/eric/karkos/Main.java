@@ -35,13 +35,33 @@ public class Main {
         return randomArray;
     }
 
+    public void toString(int[] a) {
+        System.out.print("[");
+        for (int i=0;i<a.length;i++) {
+           while (i<a.length-1) {
+               System.out.print(a[i] + ", ");
+               i++;
+           }
+           System.out.print(a[i] + "]");
+        }
+    }
+
     public static void main(String[] args) {
     	Main main = new Main();
+
+    	// Bubble Sort
     	int[] unsortedArray = main.createInts(100, 500);
     	Bubble bubble = new Bubble();
     	bubble.bubbleSort(unsortedArray);
     	for (int i : unsortedArray) {
     	    System.out.println(i);
         }
+        System.out.println();
+
+        // Bogo Sort
+        int[] bogoArray = main.createInts(100, 500);
+    	Bogo bogo = new Bogo();
+    	bogo.bogoSort(bogoArray);
+    	main.toString(bogoArray);
     }
 }
