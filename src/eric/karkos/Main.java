@@ -1,10 +1,15 @@
 package eric.karkos;
 
 import java.util.Random;
+import java.util.Timer;
 
 public class Main {
 
     private Random random = new Random();
+    
+    public Main(){
+    	
+    } // No-arg class constructor
 
     // Pre: The maximum size that you want the array returned to be
     // Post: Returns a random integer between 0 and maxSize
@@ -31,6 +36,12 @@ public class Main {
     }
 
     public static void main(String[] args) {
-
+    	Main main = new Main();
+    	int[] unsortedArray = main.createInts(100, 500);
+    	Bubble bubble = new Bubble();
+    	bubble.bubbleSort(unsortedArray);
+    	for (int i : unsortedArray) {
+    	    System.out.println(i);
+        }
     }
 }
