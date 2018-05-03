@@ -36,31 +36,20 @@ public class Main {
         return randomArray;
     }
 
-    public void toString(int[] a) {
-        System.out.print("[");
-        for (int i=0;i<a.length;i++) {
-           while (i<a.length-1) {
-               System.out.print(a[i] + ", ");
-               i++;
-           }
-           System.out.print(a[i] + "]");
-        }
-    }
-
     public static void main(String[] args) {
     	Main main = new Main();
 
     	// Bubble Sort
-    	int[] unsortedArray = main.createInts(10, 500);
+    	int[] bubbleArray = main.createInts(10, 500);
     	Bubble bubble = new Bubble();
-    	bubble.bubbleSort(unsortedArray);
-    	System.out.println(Arrays.toString(unsortedArray));
+    	bubble.bubbleSort(bubbleArray);
+    	System.out.println(Arrays.toString(bubbleArray));
         System.out.println();
 
         // Bogo Sort
         int[] bogoArray = main.createInts(10, 500);
     	Bogo bogo = new Bogo();
     	bogo.bogoSort(bogoArray);
-    	main.toString(bogoArray);
+    	System.out.println(Arrays.toString(bogoArray));
     }
 }
