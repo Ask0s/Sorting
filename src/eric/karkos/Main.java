@@ -1,5 +1,6 @@
 package eric.karkos;
 
+import java.util.Arrays;
 import java.util.Random;
 import java.util.Timer;
 
@@ -50,16 +51,14 @@ public class Main {
     	Main main = new Main();
 
     	// Bubble Sort
-    	int[] unsortedArray = main.createInts(100, 500);
+    	int[] unsortedArray = main.createInts(10, 500);
     	Bubble bubble = new Bubble();
     	bubble.bubbleSort(unsortedArray);
-    	for (int i : unsortedArray) {
-    	    System.out.println(i);
-        }
+    	System.out.println(Arrays.toString(unsortedArray));
         System.out.println();
 
         // Bogo Sort
-        int[] bogoArray = main.createInts(100, 500);
+        int[] bogoArray = main.createInts(10, 500);
     	Bogo bogo = new Bogo();
     	bogo.bogoSort(bogoArray);
     	main.toString(bogoArray);
