@@ -43,23 +43,30 @@ public class Main {
     	int[] bubbleArray = main.createInts(20, 500);
     	Bubble bubble = new Bubble();
     	bubble.bubbleSort(bubbleArray);
-    	System.out.println(Arrays.toString(bubbleArray));
-        System.out.println();
+    	System.out.println("Bubble sort:");
+    	System.out.println(Arrays.toString(bubbleArray) + "\n");
 
         // Bogo Sort
         int[] bogoArray = main.createInts(10, 500);
     	Bogo bogo = new Bogo();
     	bogo.bogoSort(bogoArray);
-    	System.out.println(Arrays.toString(bogoArray));
-    	System.out.println();
+    	System.out.println("Bogo sort:");
+    	System.out.println(Arrays.toString(bogoArray) + "\n");
     	
     	// Selection sort
     	int[] selectionArray = main.createInts(20, 500);
     	Selection selection = new Selection();
     	selection.selectionSort(selectionArray);
-    	System.out.println(Arrays.toString(selectionArray));
-    	System.out.println(selectionArray.length);
-    	System.out.println();
+    	System.out.println("Selection sort:");
+    	System.out.println(Arrays.toString(selectionArray) + "\n");
+    	
+    	// Quick sort
+    	int[] quickArray = main.createInts(10, 500);
+    	QuickSort quick = new QuickSort();
+    	quick.quickSort(quickArray);
+    	System.out.println("Quick sort:");
+    	System.out.println(Arrays.toString(quickArray) + "\n");
+    	
     	
     }
 }
