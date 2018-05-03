@@ -40,7 +40,7 @@ public class Main {
     	Main main = new Main();
 
     	// Bubble Sort
-    	int[] bubbleArray = main.createInts(10, 500);
+    	int[] bubbleArray = main.createInts(20, 500);
     	Bubble bubble = new Bubble();
     	bubble.bubbleSort(bubbleArray);
     	System.out.println(Arrays.toString(bubbleArray));
@@ -51,5 +51,15 @@ public class Main {
     	Bogo bogo = new Bogo();
     	bogo.bogoSort(bogoArray);
     	System.out.println(Arrays.toString(bogoArray));
+    	System.out.println();
+    	
+    	// Selection sort
+    	int[] selectionArray = main.createInts(20, 500);
+    	Selection selection = new Selection();
+    	selection.selectionSort(selectionArray);
+    	System.out.println(Arrays.toString(selectionArray));
+    	System.out.println(selectionArray.length);
+    	System.out.println();
+    	
     }
 }
