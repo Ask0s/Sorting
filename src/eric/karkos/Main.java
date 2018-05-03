@@ -63,7 +63,7 @@ public class Main {
     	// Quick sort
     	int[] quickArray = main.createInts(10, 500);
     	QuickSort quick = new QuickSort();
-    	quick.quickSort(quickArray);
+    	quick.quickSort(quickArray, 0, quickArray.length-1);
     	System.out.println("Quick sort:");
     	System.out.println(Arrays.toString(quickArray) + "\n");
     	

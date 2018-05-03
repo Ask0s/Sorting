@@ -8,7 +8,7 @@ public class QuickSort {
 		
 	}
 	
-	public void quickSort(int[] toSort) {
+	public void quickSort(int[] toSort, int low, int high) {
 		int pivotIndex = 0;
 		
 		for(int i=0;i<toSort.length-1;i++) {
@@ -22,6 +22,18 @@ public class QuickSort {
 			}
 			swap.swapElementsInt(i, storeIndex-1, toSort);
 		}
+	}
+	
+	public void partition(int[] list, int low, int high) {
+		int pivot = list[high];
+		int s = low-1;
+		for(int i=low;i<high;i++) {
+			if(list[i] <= pivot) {
+				s++;
+				swap.swapElementsInt(s, i, list);
+			}
+		}
+		swap.swapElementsInt(s+1, high, list);
 	}
 
 }
